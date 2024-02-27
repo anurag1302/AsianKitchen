@@ -1,4 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
+<ItemGroup>
+    <ProjectReference Include="..\AsianKitchen.Application\AsianKitchen.Application.csproj" />
+    <ProjectReference Include="..\AsianKitchen.Contracts\AsianKitchen.Contracts.csproj" />
+    <ProjectReference Include="..\AsianKitchen.Infrastructure\AsianKitchen.Infrastructure.csproj" />
+</ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
