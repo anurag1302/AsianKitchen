@@ -1,0 +1,15 @@
+/AsianKitchen.Api/bin
+/AsianKitchen.Api/obj
+
+/AsianKitchen.Application/bin
+/AsianKitchen.Application/obj
+
+/AsianKitchen.Contracts/bin
+/AsianKitchen.Contracts/obj
+
+/AsianKitchen.Domain/bin
+/AsianKitchen.Domain/obj
+
+/AsianKitchen.Infrastructure/bin
+/AsianKitchen.Infrastructure/obj
+
