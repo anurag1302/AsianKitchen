@@ -1,4 +1,4 @@
-namespace AsianKitchen.Contracts;
+namespace AsianKitchen.Contracts.Authentication;
 
 public class LoginRequest
 {
