@@ -4,8 +4,8 @@ POST {{host}}/auth/login
 Content-Type: application/json
 
 {
-    "Email":"anurag@gmail.com",
-    "Password":"test@123"
+    "email":"anurag@gmail.com",
+    "password":"test@123"
 }
 
 ###
@@ -18,10 +18,10 @@ POST {{host}}/auth/register
 Content-Type: application/json
 
 {
-    "FirstName":"anurag",
-    "LastName":"sinha",
-    "Email":"anurag@gmail.com",
-    "Password":"test@123"
+    "firstName":"anurag",
+    "lastName":"sinha",
+    "email":"anurag@gmail.com",
+    "password":"test@123"
 }
 
 ###
