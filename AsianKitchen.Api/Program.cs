@@ -4,12 +4,15 @@ using Microsoft.Extensions.Hosting;
 using AsianKitchen.Application;
 using AsianKitchen.Infrastructure;
 using AsianKitchen.Api.Middlewares;
+using AsianKitchen.Api.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => {
+    options.Filters.Add<ExceptionHandlerFilterAttribute>();
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -22,7 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseMiddleware<ExceptionHandlerMiddleware>();
+//app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.UseHttpsRedirection();
 app.MapControllers();
 
