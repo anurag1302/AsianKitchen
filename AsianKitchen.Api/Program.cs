@@ -10,9 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddControllers(options => {
-    options.Filters.Add<ExceptionHandlerFilterAttribute>();
-});
+
+// builder.Services.AddControllers(options => {
+//     options.Filters.Add<ExceptionHandlerFilterAttribute>();
+// });
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -26,6 +28,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //app.UseMiddleware<ExceptionHandlerMiddleware>();
+app.UseExceptionHandler("/error");
 app.UseHttpsRedirection();
 app.MapControllers();
 
